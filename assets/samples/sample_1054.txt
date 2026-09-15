@@ -1,0 +1,3 @@
+ERROR 1054 (42S22): Unknown column 'studen_name' in 'field list'
+---QUERY---
+SELECT studen_name, age FROM students WHERE id = 1

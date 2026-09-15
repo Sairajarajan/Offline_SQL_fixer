@@ -1,0 +1,6 @@
+# placeholder - models are downloaded via tools/download_models.py into this folder:
+# distilbert_ner.onnx (66M)
+# minilm_l6v2.tflite (22M)
+# flan_t5_small.onnx (80M)
+# opus_mt_en_ta.onnx (~75M)
+# App works offline with regex fallback even if folder is empty (demo-safe).

@@ -1,0 +1,48 @@
+name: offline_sql_fixer
+description: Offline SQL Error Fixer for CS Labs - Ryze AI Hack Small Models. 100% offline, code never leaves device.
+publish_to: 'none'
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.2.0 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+  # Offline TTS (uses device engine, no network)
+  flutter_tts: ^4.0.2
+  # Offline storage
+  hive: ^2.2.3
+  hive_flutter: ^1.1.0
+  shared_preferences: ^2.2.3
+  path_provider: ^2.1.2
+  # On-device AI runtime (local, no API). MiniLM matching is pure-Dart
+  # TF-IDF cosine here so the demo builds everywhere; swap in tflite_flutter
+  # (all-MiniLM-L6-v2.tflite) when you need real embeddings - see RESOURCES.md.
+  onnxruntime: ^1.4.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^3.0.0
+  hive_generator: ^2.0.1
+  build_runner: ^2.4.6
+  flutter_launcher_icons: ^0.14.3
+
+flutter:
+  uses-material-design: true
+  assets:
+    - assets/data/sql_errors.json
+    - assets/samples/
+    - assets/models/.gitkeep
+    - assets/logo/app_icon.png
+
+flutter_launcher_icons:
+  image_path: assets/logo/app_icon.png
+  android: true
+  ios: true
+  remove_alpha_ios: true
+  web:
+    generate: true
+  windows:
+    generate: true

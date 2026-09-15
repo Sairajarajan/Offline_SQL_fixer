@@ -1,0 +1,1 @@
+sentence-transformers/all-MiniLM-L6-v2 22M Apache-2.0

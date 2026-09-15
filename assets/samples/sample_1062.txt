@@ -1,0 +1,3 @@
+ERROR 1062 (23000): Duplicate entry '101' for key 'students.PRIMARY'
+---QUERY---
+INSERT INTO students (id, name, age) VALUES (101, 'Ravi', 20)
